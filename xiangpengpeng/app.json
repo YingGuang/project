@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f53e3a",
+    "navigationBarTitleText": "享烹烹",
+    "navigationBarTextStyle":"#fff"
+  }
+}
