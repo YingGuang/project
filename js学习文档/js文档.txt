@@ -1,0 +1,383 @@
+查找元素：
+document.getElementById('id') 
+getElementsByClassName('class')
+
+修改css
+document.getElementById(id).style.color=new color;
+document.getElementById(id).style.cssText="color:red;widrth:100px"
+
+document.getElementById(id).className="class"设置类名
+document.getElementById(id).className+="class"设置增加一个类名
+document.getElementById(id).className=replace（类名）设置类名
+
+修改元素内的内容
+document.getElementById(id).innerHTML=new HTML
+
+改变 HTML 元素的属性
+document.getElementById(id).attribute=new value
+
+var para=document.createElement("p");创建新的 <p> 元素
+var node=document.createTextNode("这是新段落。");创建文本节点
+para.appendChild(node);向 <p> 元素追加这个文本节点
+
+parent.removeChild(child);删除已有的 HTML 元素
+
+有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
+对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：
+window.innerHeight - 浏览器窗口的内部高度
+window.innerWidth - 浏览器窗口的内部宽度
+对于 Internet Explorer 8、7、6、5：
+document.documentElement.clientHeight
+document.documentElement.clientWidth
+或者
+document.body.clientHeight
+document.body.clientWidth
+实用的 JavaScript 方案（涵盖所有浏览器）：
+
+
+Array 对象方法
+
+concat()	连接两个或更多的数组，并返回结果。
+join()	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+pop()	删除并返回数组的最后一个元素
+push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+reverse()	颠倒数组中元素的顺序。
+shift()	删除并返回数组的第一个元素
+slice()	从某个已有的数组返回选定的元素
+sort()	对数组的元素进行排序
+splice()	删除元素，并向数组添加新元素。
+toSource()	返回该对象的源代码。
+toString()	把数组转换为字符串，并返回结果。
+toLocaleString()	把数组转换为本地数组，并返回结果。
+unshift()	向数组的开头添加一个或更多元素，并返回新的长度。
+valueOf()	返回数组对象的原始值
+
+
+
+Date 对象方法
+方法	描述
+Date()	返回当日的日期和时间。
+getDate()	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+getDay()	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+getMonth()	从 Date 对象返回月份 (0 ~ 11)。
+getFullYear()	从 Date 对象以四位数字返回年份。
+getYear()	请使用 getFullYear() 方法代替。
+getHours()	返回 Date 对象的小时 (0 ~ 23)。
+getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。
+getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。
+getMilliseconds()	返回 Date 对象的毫秒(0 ~ 999)。
+getTime()	返回 1970 年 1 月 1 日至今的毫秒数。
+getTimezoneOffset()	返回本地时间与格林威治标准时间 (GMT) 的分钟差。
+getUTCDate()	根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。
+getUTCDay()	根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。
+getUTCMonth()	根据世界时从 Date 对象返回月份 (0 ~ 11)。
+getUTCFullYear()	根据世界时从 Date 对象返回四位数的年份。
+getUTCHours()	根据世界时返回 Date 对象的小时 (0 ~ 23)。
+getUTCMinutes()	根据世界时返回 Date 对象的分钟 (0 ~ 59)。
+getUTCSeconds()	根据世界时返回 Date 对象的秒钟 (0 ~ 59)。
+getUTCMilliseconds()	根据世界时返回 Date 对象的毫秒(0 ~ 999)。
+parse()	返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
+setDate()	设置 Date 对象中月的某一天 (1 ~ 31)。
+setMonth()	设置 Date 对象中月份 (0 ~ 11)。
+setFullYear()	设置 Date 对象中的年份（四位数字）。
+setYear()	请使用 setFullYear() 方法代替。
+setHours()	设置 Date 对象中的小时 (0 ~ 23)。
+setMinutes()	设置 Date 对象中的分钟 (0 ~ 59)。
+setSeconds()	设置 Date 对象中的秒钟 (0 ~ 59)。
+setMilliseconds()	设置 Date 对象中的毫秒 (0 ~ 999)。
+setTime()	以毫秒设置 Date 对象。
+setUTCDate()	根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。
+setUTCMonth()	根据世界时设置 Date 对象中的月份 (0 ~ 11)。
+setUTCFullYear()	根据世界时设置 Date 对象中的年份（四位数字）。
+setUTCHours()	根据世界时设置 Date 对象中的小时 (0 ~ 23)。
+setUTCMinutes()	根据世界时设置 Date 对象中的分钟 (0 ~ 59)。
+setUTCSeconds()	根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。
+setUTCMilliseconds()	根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
+toSource()	返回该对象的源代码。
+toString()	把 Date 对象转换为字符串。
+toTimeString()	把 Date 对象的时间部分转换为字符串。
+toDateString()	把 Date 对象的日期部分转换为字符串。
+
+
+
+Math 对象属性
+属性	描述
+E	返回算术常量 e，即自然对数的底数（约等于2.718）。
+LN2	返回 2 的自然对数（约等于0.693）。
+LN10	返回 10 的自然对数（约等于2.302）。
+LOG2E	返回以 2 为底的 e 的对数（约等于 1.414）。
+LOG10E	返回以 10 为底的 e 的对数（约等于0.434）。
+PI	返回圆周率（约等于3.14159）。
+SQRT1_2	返回返回 2 的平方根的倒数（约等于 0.707）。
+SQRT2	返回 2 的平方根（约等于 1.414）。
+
+Math 对象方法
+方法	描述
+abs(x)	返回数的绝对值。
+acos(x)	返回数的反余弦值。
+asin(x)	返回数的反正弦值。
+atan(x)	以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。
+atan2(y,x)	返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。
+ceil(x)	对数进行上舍入。
+cos(x)	返回数的余弦。
+exp(x)	返回 e 的指数。
+floor(x)	对数进行下舍入。
+log(x)	返回数的自然对数（底为e）。
+max(x,y)	返回 x 和 y 中的最高值。
+min(x,y)	返回 x 和 y 中的最低值。
+pow(x,y)	返回 x 的 y 次幂。
+random()	返回 0 ~ 1 之间的随机数。
+round(x)	把数四舍五入为最接近的整数。
+sin(x)	返回数的正弦。
+sqrt(x)	返回数的平方根。
+tan(x)	返回角的正切。
+
+
+
+
+修饰符
+修饰符	描述
+i	执行对大小写不敏感的匹配。
+g	执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+m	执行多行匹配。
+方括号
+方括号用于查找某个范围内的字符：
+表达式	描述
+[abc]	查找方括号之间的任何字符。
+[^abc]	查找任何不在方括号之间的字符。
+[0-9]	查找任何从 0 至 9 的数字。
+[a-z]	查找任何从小写 a 到小写 z 的字符。
+[A-Z]	查找任何从大写 A 到大写 Z 的字符。
+[A-z]	查找任何从大写 A 到小写 z 的字符。
+[adgk]	查找给定集合内的任何字符。
+[^adgk]	查找给定集合外的任何字符。
+(red|blue|green)	查找任何指定的选项。
+元字符
+元字符（Metacharacter）是拥有特殊含义的字符：
+元字符	描述
+.	查找单个字符，除了换行和行结束符。
+\w	查找单词字符。
+\W	查找非单词字符。
+\d	查找数字。
+\D	查找非数字字符。
+\s	查找空白字符。
+\S	查找非空白字符。
+\b	匹配单词边界。
+\B	匹配非单词边界。
+\0	查找 NUL 字符。
+\n	查找换行符。
+\f	查找换页符。
+\r	查找回车符。
+\t	查找制表符。
+\v	查找垂直制表符。
+\xxx	查找以八进制数 xxx 规定的字符。
+\xdd	查找以十六进制数 dd 规定的字符。
+\uxxxx	查找以十六进制数 xxxx 规定的 Unicode 字符。
+量词
+量词	描述
+n+	匹配任何包含至少一个 n 的字符串。
+n*	匹配任何包含零个或多个 n 的字符串。
+n?	匹配任何包含零个或一个 n 的字符串。
+n{X}	匹配包含 X 个 n 的序列的字符串。
+n{X,Y}	匹配包含 X 至 Y 个 n 的序列的字符串。
+n{X,}	匹配包含至少 X 个 n 的序列的字符串。
+n$	匹配任何结尾为 n 的字符串。
+^n	匹配任何开头为 n 的字符串。
+?=n	匹配任何其后紧接指定字符串 n 的字符串。
+?!n	匹配任何其后没有紧接指定字符串 n 的字符串。
+RegExp 对象属性
+属性	描述	FF	IE
+global	RegExp 对象是否具有标志 g。	1	4
+ignoreCase	RegExp 对象是否具有标志 i。	1	4
+lastIndex	一个整数，标示开始下一次匹配的字符位置。	1	4
+multiline	RegExp 对象是否具有标志 m。	1	4
+source	正则表达式的源文本。	1	4
+RegExp 对象方法
+方法	描述	FF	IE
+compile	编译正则表达式。	1	4
+exec	检索字符串中指定的值。返回找到的值，并确定其位置。	1	4
+test	检索字符串中指定的值。返回 true 或 false。	1	4
+支持正则表达式的 String 对象的方法
+方法	描述	FF	IE
+search	检索与正则表达式相匹配的值。	1	4
+match	找到一个或多个正则表达式的匹配。	1	4
+replace	替换与正则表达式匹配的子串。	1	4
+split	把字符串分割为字符串数组。
+
+
+
+事件：
+属性	当以下情况发生时，出现此事件	FF	N	IE
+onabort	图像加载被中断	1	3	4
+onblur	元素失去焦点	1	2	3
+onchange	用户改变域的内容	1	2	3
+onclick	鼠标点击某个对象	1	2	3
+ondblclick	鼠标双击某个对象	1	4	4
+onerror	当加载文档或图像时发生某个错误	1	3	4
+onfocus	元素获得焦点	1	2	3
+onkeydown	某个键盘的键被按下	1	4	3
+onkeypress	某个键盘的键被按下或按住	1	4	3
+onkeyup	某个键盘的键被松开	1	4	3
+onload	某个页面或图像被完成加载	1	2	3
+onmousedown	某个鼠标按键被按下	1	4	4
+onmousemove	鼠标被移动	1	6	3
+onmouseout	鼠标从某元素移开	1	4	4
+onmouseover	鼠标被移到某元素之上	1	2	3
+onmouseup	某个鼠标按键被松开	1	4	4
+onreset	重置按钮被点击	1	3	4
+onresize	窗口或框架被调整尺寸	1	4	4
+onselect	文本被选定	1	2	3
+onsubmit	提交按钮被点击	1	2	3
+onunload	用户退出页面	1	2	3
+
+
+
+鼠标 / 键盘属性
+属性	描述
+altKey	返回当事件被触发时，"ALT" 是否被按下。
+button	返回当事件被触发时，哪个鼠标按钮被点击。
+clientX	返回当事件被触发时，鼠标指针的水平坐标。
+clientY	返回当事件被触发时，鼠标指针的垂直坐标。
+ctrlKey	返回当事件被触发时，"CTRL" 键是否被按下。
+metaKey	返回当事件被触发时，"meta" 键是否被按下。
+relatedTarget	返回与事件的目标节点相关的节点。
+screenX	返回当某个事件被触发时，鼠标指针的水平坐标。
+screenY	返回当某个事件被触发时，鼠标指针的垂直坐标。
+shiftKey	返回当事件被触发时，"SHIFT" 键是否被按下。
+
+
+
+高级js摘抄：
+
+按照解析嵌入式代码的规则，当浏览器遇到字符串 "</script>" 时，就会认为那是结束的
+</script> 标签。而通过转义字符“\”可以解决这个问题，例如：
+<script type="text/javascript">
+function sayScript(){
+alert("<\/script>");
+}
+</script>
+
+注意的是，带有 src 属性的 <script> 元素不应该在其 <script> 和 </script> 标签之间再
+包含额外的 JavaScript 代码。如果包含了嵌入的代码，则只会下载并执行外部脚本文件，嵌入的代码
+会被忽略。
+
+使用 <noscript> 元素可以指定在不支持脚本的浏览器中显示的替代内容。但在启用了脚本
+的情况下，浏览器不会显示 <noscript> 元素中的任何内容。
+
+严格模式"use strict"
+
+typeof 操作符;检查变量类别
+
+.valueOf() 方法可返回 Boolean 对象的原始值。
+
+"undefined" ——如果这个值未定义；
+? "boolean" ——如果这个值是布尔值；
+? "string" ——如果这个值是字符串；
+? "number" ——如果这个值是数值；
+? "object" ——如果这个值是对象或 null ；
+? "function" ——如果这个值是函数;
+
+do-while 语句是一种后测试循环语句，即只有在循环体中的代码执行之后，才会测试出口条件。
+换句话说，在对条件表达式求值之前，循环体内的代码至少会被执行一次;
+
+break 和 continue 语句用于在循环中精确地控制代码的执行。其中， break 语句会立即退出循环，
+强制继续执行循环后面的语句。而 continue 语句虽然也是立即退出循环，但退出循环后会从循环的顶
+部继续执行。
+
+ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。基本类型值指的是
+简单的数据段，而引用类型值指那些可能由多个值构成的对象。
+
+alert(person instanceof Object);  // 变量 person 是 Object 吗？
+alert(colors instanceof Array); // 变量 colors 是 Array 吗？
+alert(pattern instanceof RegExp); // 变量 pattern 是 RegExp 吗？
+根据规定，所有引用类型的值都是 Object 的实例。因此，在检测一个引用类型值和 Object 构造
+函数时， instanceof 操作符始终会返回 true 。当然，如果使用 instanceof 操作符检测基本类型的
+值，则该操作符始终会返回 false ，因为基本类型不是对象。
+
+每个函数都有自己的执行环境,window是全局执行环境；
+
+基本类型值在内存中占据固定大小的空间，因此被保存在栈内存中；
+?  从一个变量向另一个变量复制基本类型的值，会创建这个值的一个副本；
+?  引用类型的值是对象，保存在堆内存中；
+?  包含引用类型值的变量实际上包含的并不是对象本身，而是一个指向该对象的指针；
+?  从一个变量向另一个变量复制引用类型的值，复制的其实是指针，因此两个变量最终都指向同
+一个对象；
+
+开发人员青睐对象字面量语法，因为这种
+语法要求的代码量少，而且能够给人封装数据的感觉。对象字面量也是向函数传递大量可选参
+数的首选方式
+
+
+var person={"name":"Nicholas"};
+alert(person["name"]); //"Nicholas"
+alert(person.name); //"Nicholas"
+
+var propertyName = "name";
+alert(person[propertyName]); //"Nicholas"
+从功能上看，这两种访问对象属性的方法没有任何区别。但方括号语法的主要优点是可以通过变量
+来访问属性
+
+
+数组的 length 属性很有特点——它不是只读的。因此，通过设置这个属性，可以从数组的末尾移
+除项或向数组中添加新项。请看下面的例子：
+var colors = ["red", "blue", "green"]; // 创建一个包含 3 个字符串的数组
+colors.length = 2;
+alert(colors[2]); //undefined
+
+var colors = ["red", "blue", "green"]; // 创建一个包含 3 个字符串的数组
+colors[colors.length] = "black"; // （在位置 3 ）添加一种颜色
+colors[colors.length] = "brown"; // （在位置 4 ）再添加一种颜色
+由于数组最后一项的索引始终是 length-1 ，因此下一个新项的位置就是 length 
+
+
+栈数据结构的访问规则是 LIFO（后进先出），而队列数据结构的访问规则是 FIFO（First-In-First-Out，
+先进先出）。
+
+这个比较函数可以适用于大多数数据类型，只要将其作为参数传递给 sort() 方法即可，如下面这
+个例子所示。
+
+function compare(value1, value2) {
+        if (value1 < value2) {
+            return -1;
+        } else if (value1 > value2) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+var values = [0, 1, 5, 10, 15];
+values.sort(compare);
+alert(values); //0,1,5,10,15
+
+ concat() 方法可以基于当前数
+组中的所有项创建一个新数组。具体来说，这个方法会先创建当前数组一个副本，然后将接收到的参数
+添加到这个副本的末尾，最后返回新构建的数组。
+
+slice() 方法返回从该
+参数指定位置开始到当前数组末尾的所有项。如果有两个参数，该方法返回起始和结束位置之间的项—
+—但不包括结束位置的项。
+
+ indexOf() 和 lastIndexOf() 。这两个方法都接收
+两个参数：要查找的项和（可选的）表示查找起点位置的索引。其中， indexOf() 方法从数组的开头（位
+置 0）开始向后查找， lastIndexOf() 方法则从数组的末尾开始向前查找。
+
+ 5 个迭代方法的作用。
+? every() ：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true ，则返回 true 。
+? filter() ：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
+? forEach() ：对数组中的每一项运行给定函数。这个方法没有返回值。
+? map() ：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+? some() ：对数组中的每一项运行给定函数，如果该函数对任一项返回 true ，则返回 true 
+
+
+在函数内部，有两个特殊的对象： arguments 和 this 。其中， arguments 在第 3 章曾经介绍过，
+它是一个类数组对象，包含着传入函数中的所有参数。虽然 arguments 的主要用途是保存函数参数，
+但这个对象还有一个名叫 callee 的属性，该属性是一个指针，指向拥有这个 arguments 对象的函数。
+
+
+每个函数都包含两个非继承而来的方法： apply() 和 call() 。这两个方法的用途都是在特定的作
+用域中调用函数，实际上等于设置函数体内 this 对象的值。
+
+每个函数都包含两个
+属性： length 和 prototype 。其中， length 属性表示函数希望接收的命名参数的个数
+
+， min() 和 max() 方法用于确定一组数值中的最小值和最大值
